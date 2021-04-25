@@ -35,12 +35,23 @@ test("disable button on checkbox click", () => {
 
   expect(checkBox).toBeChecked();
   expect(colorButton).toBeDisabled();
+  expect(colorButton).toHaveStyle({ backgroundColor: "gray" });
 });
 
 test("re-enable button on second checkbox click", () => {
   fireEvent.click(checkBox);
   fireEvent.click(checkBox);
-
+  
   expect(checkBox).not.toBeChecked();
   expect(colorButton).toBeEnabled();
+  expect(colorButton).toHaveStyle({ backgroundColor: "red" });
 });
+
+test("disable button after button click", () => {
+  fireEvent.click(colorButton);
+  fireEvent.click(checkBox);
+
+  expect(colorButton).toHaveStyle({ backgroundColor: "gray" });
+});
+
+
