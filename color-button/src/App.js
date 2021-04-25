@@ -21,6 +21,9 @@ const App = () => {
         type="checkbox"
         onClick={(event) => setDisabled(event.target.checked)}
       />
+      >
+        Change to {newButtonColor}
+      </button>
     </div>
   );
 };

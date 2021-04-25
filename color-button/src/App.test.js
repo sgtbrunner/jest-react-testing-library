@@ -12,7 +12,6 @@ beforeEach(() => {
 test("initial conditions", () => {
   expect(colorButton).toBeEnabled();
   expect(checkBox).not.toBeChecked();
-});
 
 test("button has correct initial color", () => {
   expect(colorButton).toHaveStyle({ backgroundColor: "red" });
