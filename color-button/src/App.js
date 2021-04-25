@@ -17,8 +17,12 @@ const App = () => {
       >
         Change to {newButtonColor}
       </button>
+      <label htmlFor="disable-button-checkbox">Disable input</label>
       <input
         type="checkbox"
+        id="disable-button-checkbox"
+        defaultChecked={disabled}
+        aria-checked={disabled}
         onClick={(event) => setDisabled(event.target.checked)}
       />
     </div>
