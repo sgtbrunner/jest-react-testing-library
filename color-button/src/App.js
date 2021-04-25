@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 
+export const replaceCamelWithSpaces = (colorName) =>
+  colorName.replace(/\B([A-Z])\B/g, " $1");
+
 const RED = "red";
 const BLUE = "blue";
-const GRAY = 'gray';
+const GRAY = "gray";
 
 const App = () => {
   const [buttonColor, setButtonColor] = useState(RED);
