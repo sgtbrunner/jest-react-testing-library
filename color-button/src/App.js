@@ -3,8 +3,8 @@ import React, { useState } from "react";
 export const replaceCamelWithSpaces = (colorName) =>
   colorName.replace(/\B([A-Z])\B/g, " $1");
 
-const RED = "red";
-const BLUE = "blue";
+const RED = "MediumVioletRed";
+const BLUE = "MidnightBlue";
 const GRAY = "gray";
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
         onClick={() => setButtonColor(newButtonColor)}
         disabled={disabled}
       >
-        Change to {newButtonColor}
+        Change to {replaceCamelWithSpaces(newButtonColor)}
       </button>
       <label htmlFor="disable-button-checkbox">Disable input</label>
       <input
