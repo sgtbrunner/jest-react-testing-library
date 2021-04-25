@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const RED = "red";
 const BLUE = "blue";
+const GRAY = 'gray';
 
 const App = () => {
   const [buttonColor, setButtonColor] = useState(RED);
@@ -11,7 +12,7 @@ const App = () => {
   return (
     <div>
       <button
-        style={{ backgroundColor: buttonColor }}
+        style={{ backgroundColor: disabled ? GRAY : buttonColor }}
         onClick={() => setButtonColor(newButtonColor)}
         disabled={disabled}
       >
