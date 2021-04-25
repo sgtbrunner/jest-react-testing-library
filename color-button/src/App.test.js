@@ -6,7 +6,7 @@ let checkBox;
 beforeEach(() => {
   render(<App />);
   colorButton = screen.getByRole("button", { name: "Change to blue" });
-  checkBox = screen.getByRole("checkbox");
+  checkBox = screen.getByRole("checkbox", { name: "Disable input" });
 });
 
 test("initial conditions", () => {
