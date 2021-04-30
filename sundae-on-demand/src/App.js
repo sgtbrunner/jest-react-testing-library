@@ -1,7 +1,17 @@
-import React from "react";
+import React from 'react';
+import Container from 'react-bootstrap/Container';
 
-function App() {
-  return <div></div>;
-}
+import OrderEntry from './pages/entry/OrderEntry';
+import { OrderDetailsProvider } from './contexts/OrderDetails';
+
+const App = () => {
+  return (
+    <Container>
+      <OrderDetailsProvider>
+        <OrderEntry />
+      </OrderDetailsProvider>
+    </Container>
+  );
+};
 
 export default App;
